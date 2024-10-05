@@ -1,0 +1,30 @@
+﻿@model ProjectPortfolio.Models.Testimonial
+
+@{
+    ViewBag.Title = "CreateTestimonial";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class=" mb-4">Referanslarım Listesi</h2>
+<br />
+
+<form method="post">
+    <label>Adı Soyadı</label>
+    <!--Inputtan farkı. Name e için hata olasılıpını azaldır. her seferinde sqle gitmeye gerek kalmaz-->
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+
+    <label>Ünvanı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
+    <br />
+    <label>Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Referans Oluştur</button>
+</form>
+

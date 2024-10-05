@@ -1,0 +1,24 @@
+﻿@model ProjectPortfolio.Models.Category
+
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class=" mb-4">Kategori Listesi</h2>
+<br />
+
+<form method="post">
+    <label>Kategori Adı</label>
+    <!--Inputtan farkı. Name e için hata olasılıpını azaldır. her seferinde sqle gitmeye gerek kalmaz-->
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+
+    <label>Aktiflik Durumu</label>
+    @Html.TextBoxFor(x => x.CategoryStatus, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-info">Kategori Oluştur</button>
+</form>
+

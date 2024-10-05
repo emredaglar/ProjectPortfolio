@@ -1,0 +1,41 @@
+﻿@model ProjectPortfolio.Models.Profile
+@{
+    ViewBag.Title = "ProfileList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+
+<h2 class=" mb-4">Profil</h2>
+
+<form method="post">
+    <label>Ünvan</label>
+    <!--Inputtan farkı. Name e için hata olasılıpını azaldır. her seferinde sqle gitmeye gerek kalmaz-->
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 3, 0, new { @class = "form-control" })
+    <br />
+
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+    <br />
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+    <label>Github Link</label>
+    @Html.TextBoxFor(x => x.Github, new { @class = "form-control" })
+    <br />
+    <label>Fotoğraf URL</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Harita URL</label>
+    @Html.TextBoxFor(x => x.MapLocation, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Güncelle</button>
+</form>

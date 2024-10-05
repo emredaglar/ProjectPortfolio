@@ -1,0 +1,30 @@
+﻿@model ProjectPortfolio.Models.Servicess
+@{
+    ViewBag.Title = "UpdateServicess";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+
+
+<h2 class=" mb-4">Hizmet Güncelle</h2>
+<br />
+
+<form method="post">
+    @Html.TextBoxFor(x => x.ServiceId, new { @class = "form-control" })
+    <label>Hizmet Adı</label>
+    <!--Inputtan farkı. Name e için hata olasılıpını azaldır. her seferinde sqle gitmeye gerek kalmaz-->
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Logo Url</label>
+    @Html.TextBoxFor(x => x.feature, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Hizmeti Güncelle</button>
+</form>
+
+

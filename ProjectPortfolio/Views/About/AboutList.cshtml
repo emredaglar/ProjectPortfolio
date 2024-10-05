@@ -1,0 +1,26 @@
+﻿@model ProjectPortfolio.Models.About
+
+@{
+    ViewBag.Title = "AboutList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class=" mb-4">Hakkımda</h2>
+
+<form method="post">
+    <label>Ünvan</label>
+    <!--Inputtan farkı. Name e için hata olasılıpını azaldır. her seferinde sqle gitmeye gerek kalmaz-->
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Detail,6,0, new { @class = "form-control" })
+    <br />
+
+    <label>Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    
+
+    <button class="btn btn-info">Güncelle</button>
+</form>

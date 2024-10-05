@@ -1,0 +1,28 @@
+﻿@model ProjectPortfolio.Models.Servicess
+
+@{
+    ViewBag.Title = "CreateServicess";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h2 class=" mb-4">Hizmet Ekle</h2>
+<br />
+
+<form method="post">
+    <label>Hizmet Adı</label>
+    <!--Inputtan farkı. Name e için hata olasılıpını azaldır. her seferinde sqle gitmeye gerek kalmaz-->
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Logo Url</label>
+    @Html.TextBoxFor(x => x.feature, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Hizmet Oluştur</button>
+</form>
+
+
